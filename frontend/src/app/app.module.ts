@@ -12,7 +12,6 @@ import { TokenStorageService } from './auth/token-storage.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
     LoginComponent,
     RegisterComponent,
     HomeComponent
@@ -26,7 +25,6 @@ import { TokenStorageService } from './auth/token-storage.service';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
 	TokenStorageService
-  ],
-  bootstrap: [AppComponent]
+  ]
 })
 export class AppModule { }
